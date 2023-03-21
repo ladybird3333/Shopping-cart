@@ -1,0 +1,20 @@
+<div class="row">
+    <h1 class="text-center">User Profile </h1>
+    <hr>
+    <div class="col-md-8 col-md-offset-2" style="background-color: gainsboro">
+        <hr>
+        <h2>My orders: </h2>
+        {{# each orders}}
+            <div class='panel-default'>
+                <ul class='list-group'>
+                    {{# each this.items}}
+                        <li class="list-group-item" style="border-bottom-color: black">
+                            <span class="badge margin-left" >{{this.price}}</span>
+                            {{this.item.title}} x {{this.quantity}}
+                        </li>
+                    {{/each}}
+                </ul>
+            </div>
+        {{/each}}
+    </div>
+</div>

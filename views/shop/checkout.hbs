@@ -1,0 +1,41 @@
+<div class="row" style="text-align: center;">
+    <div class="col-sm-6 col-md-4 col-md-offset-4 col-md-offset-3">
+        <h1>Checkout</h1>
+        <h4>Cart value: {{total}} zł</h4>
+        <form action="/checkout" method="post" id="checkout-form">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="form-group"><br>
+                        <input type="text" placeholder="First name" id="name" class="form-control" required name="name">
+                    </div>
+                </div>
+                <div class="col-xs-12">
+                    <div class="form-group">
+                        <input type="text" placeholder="Address" class="form-control" required name="address">
+                    </div>
+                </div>
+                <div class="col-xs-12">
+                    <div class="form-group">
+                        <input type="text" placeholder="Credit Card Number" class="form-control" required>
+                    </div>
+                </div>
+                <div class="col-xs-6">
+                    <div class="form-group">
+                        <input type="text" placeholder="Expiration year" class="form-control" required>
+                    </div>
+                </div>
+                <div class="col-xs-6">
+                    <div class="form-group">
+                        <input type="text" placeholder="Expiration month" class="form-control" required>
+                    </div>
+                </div>
+                <div class="col-xs-6">
+                    <div class="form-group">
+                        <input type="text" placeholder="CVC" class="form-control" required>
+                    </div>
+                </div>
+            </div>
+            <button class="btn btn-raised btn-success main button-submit" type="submit">Submit</button>
+        </form>
+    </div>
+</div>

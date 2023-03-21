@@ -1,0 +1,40 @@
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand">Be fit-shop</a>
+        </div>
+        <ul class="nav navbar-nav navbar-left">
+            <li class="active"><a href="/">Home</a></li>
+        </ul>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="/shopping-cart">
+                        <i class="fa fa-shopping-cart" aria-hidden="true"></i> Shopping Cart
+                        <span class="badge badge-pill badge-info">{{session.cart.totalQty}}</span>
+                    </a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false"><i class="fa fa-user" aria-hidden="true"></i> Profile <span
+                            class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        {{# if login}}
+                            <li><a href="/user/profile">User Account</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="/user/logout">Logout</a></li>
+                        {{else}}
+                            <li><a href="/user/signin">Sign in</a></li>
+                            <li><a href="/user/signup">Sign up</a></li>
+                        {{/if}}
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
